@@ -4,6 +4,9 @@
  * Для тренировки, рекурсия
 */
 
+
+//String.indexof
+
 public class Code2 {
 
     public static int sumOfDigits(String str) {
