@@ -27,6 +27,7 @@ public class Code1 {
 
         String[] result = new String[wordCount];
         int j=0;
+        result[j]="";
             for (int i = 0; i <= array.length - 1; i++) {
                 if (array[i] == delimiter.charAt(0)) {
                     j++;
@@ -39,26 +40,29 @@ public class Code1 {
         return result;
     }
 
-    public static void main(String[] args) {
-        String inText = "qwerty 12345 1234 qwe asdfgh q";
+    public static String mySdrow(String inText) {
         String[] words = splitString(" ", inText);
         String outText = "";
-
-            for (String word : words) {
-                if (word.length()<5) {
-                    if (outText.contentEquals(""))
+        for (String word : words) {
+            if (word.length()<5) {
+                if (outText.contentEquals(""))
                     outText = word;
-                    else
-                        outText = outText+" "+word;
-                }
-                else{
-                    if (outText.contentEquals(""))
-                        outText=reverseString(word);
-                    else
-                        outText=outText+" "+reverseString(word);
-                }
+                else
+                    outText = outText+" "+word;
             }
+            else{
+                if (outText.contentEquals(""))
+                    outText=reverseString(word);
+                else
+                    outText=outText+" "+reverseString(word);
+            }
+        }
+        return outText;
+    }
+
+    public static void main(String[] args) {
+        String inText = "qwerty 12345 1234 qwe asdfgh q";
             System.out.println(inText);
-            System.out.println(outText);
+            System.out.println(mySdrow(inText));
     }
 }

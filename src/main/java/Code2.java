@@ -14,7 +14,6 @@ public class Code2 {
             result=result+Integer.parseInt(String.valueOf(array[i]));
             }
         if (Integer.toString(result).length()>1){
-            System.out.println(result);
             result=sumOfDigits(String.valueOf(result));
         }
         return result;
