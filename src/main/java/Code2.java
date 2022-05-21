@@ -5,16 +5,14 @@
 */
 
 
-//String.indexof
 
 public class Code2 {
 
     public static int sumOfDigits(String str) {
-        char[] array = str.toCharArray();
         int result=0;
 
-        for (int i = 0; i <= array.length - 1; i++) {
-            result=result+Integer.parseInt(String.valueOf(array[i]));
+        for (int i = 0; i <= str.length() - 1; i++) {
+            result=result+Integer.parseInt(String.valueOf(str.charAt(i)));
             }
         if (Integer.toString(result).length()>1){
             result=sumOfDigits(String.valueOf(result));

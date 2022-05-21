@@ -7,7 +7,7 @@ public class Code4Test {
     public Object[][]unitTest (){
         return new Object[][]{
                 {new int[]{5,6,11,9,7,12,18}, 11},
-                {new int[]{5,6,-11,1,100,12,18}, 12},
+                {new int[]{5,8,Integer.MIN_VALUE,0,Integer.MAX_VALUE,12,18}, 12},
                 {new int[]{5,6,11,5,10,12,18}, 10}
         };
     }
